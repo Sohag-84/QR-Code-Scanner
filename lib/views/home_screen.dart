@@ -19,34 +19,35 @@ class _HomeScreenState extends State<HomeScreen> {
         title: Text("Qr Code Scanner"),
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ScanQrCode(),
-                ),
-              );
-            },
-            child: Text("Scan Qr Code"),
-          ),
-          SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => GenerateQrCode(),
-                ),
-              );
-            },
-            child: Text("Generate Qr Code"),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ScanQrCode(),
+                  ),
+                );
+              },
+              child: Text("Scan Qr Code"),
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => GenerateQrCode(),
+                  ),
+                );
+              },
+              child: Text("Generate Qr Code"),
+            ),
+          ],
+        ),
       ),
     );
   }
