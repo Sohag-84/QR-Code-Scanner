@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 class ScanQrCode extends StatefulWidget {
@@ -8,6 +10,8 @@ class ScanQrCode extends StatefulWidget {
 }
 
 class _ScanQrCodeState extends State<ScanQrCode> {
+  TextEditingController urlController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,10 +19,13 @@ class _ScanQrCodeState extends State<ScanQrCode> {
         title: Text("Scan Qr Code"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            Text("Scan qr code"),
+          ],
+        ),
       ),
     );
   }
